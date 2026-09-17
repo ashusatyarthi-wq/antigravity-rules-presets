@@ -33,6 +33,8 @@ This repository provides **drop-in configuration presets (`GEMINI.md`)** that co
 | **[Express + Playwright Scraping](./presets/express-playwright-scraping/)** | Anti-bot evasion, selector drift tolerance, browser pooling, memory caps | OOM server crashes, zombie Chrome processes, brittle XPath breakages | [Rules](./presets/express-playwright-scraping/GEMINI.md) • [Why](./presets/express-playwright-scraping/WHY.md) • [Proof](./presets/express-playwright-scraping/verification-proof.md) |
 | **[React Native + Expo](./presets/react-native-expo/)** | Cross-platform splits, native SDK alignment, Metro cache, async storage | Flash of unauthenticated content (FOUC), JS bridge animation stutter, native symbol crashes | [Rules](./presets/react-native-expo/GEMINI.md) • [Why](./presets/react-native-expo/WHY.md) • [Diff](./presets/react-native-expo/before-after.md) |
 | **[FastAPI + PostgreSQL](./presets/fastapi-postgresql/)** | Async SQLAlchemy 2.0, Alembic migrations, connection pooling, Pydantic v2 DTOs | MissingGreenlet exceptions, leaked transaction locks, event-loop blocking, password leaks | [Rules](./presets/fastapi-postgresql/GEMINI.md) • [Why](./presets/fastapi-postgresql/WHY.md) • [Diff](./presets/fastapi-postgresql/before-after.md) |
+| **[Go (Gin/Fiber) + HTMX](./presets/go-gin-htmx/)** | Context propagation, `database/sql` pool caps, dual-mode `HX-Request` rendering | Leaked goroutines, database socket exhaustion, page-in-a-page HTML corruptions | [Rules](./presets/go-gin-htmx/GEMINI.md) • [Why](./presets/go-gin-htmx/WHY.md) • [Diff](./presets/go-gin-htmx/before-after.md) |
+
 
 
 ---
