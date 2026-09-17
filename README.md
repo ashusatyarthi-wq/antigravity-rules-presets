@@ -32,6 +32,8 @@ This repository provides **drop-in configuration presets (`GEMINI.md`)** that co
 | **[Next.js + Supabase](./presets/nextjs-supabase/)** | App Router SSR, `@supabase/ssr`, RLS policies, cookie auth lifecycle | Secret leakage in client bundle, spoofed cookie auth, hydration mismatch | [Rules](./presets/nextjs-supabase/GEMINI.md) • [Why](./presets/nextjs-supabase/WHY.md) • [Diff](./presets/nextjs-supabase/before-after.md) |
 | **[Express + Playwright Scraping](./presets/express-playwright-scraping/)** | Anti-bot evasion, selector drift tolerance, browser pooling, memory caps | OOM server crashes, zombie Chrome processes, brittle XPath breakages | [Rules](./presets/express-playwright-scraping/GEMINI.md) • [Why](./presets/express-playwright-scraping/WHY.md) • [Proof](./presets/express-playwright-scraping/verification-proof.md) |
 | **[React Native + Expo](./presets/react-native-expo/)** | Cross-platform splits, native SDK alignment, Metro cache, async storage | Flash of unauthenticated content (FOUC), JS bridge animation stutter, native symbol crashes | [Rules](./presets/react-native-expo/GEMINI.md) • [Why](./presets/react-native-expo/WHY.md) • [Diff](./presets/react-native-expo/before-after.md) |
+| **[FastAPI + PostgreSQL](./presets/fastapi-postgresql/)** | Async SQLAlchemy 2.0, Alembic migrations, connection pooling, Pydantic v2 DTOs | MissingGreenlet exceptions, leaked transaction locks, event-loop blocking, password leaks | [Rules](./presets/fastapi-postgresql/GEMINI.md) • [Why](./presets/fastapi-postgresql/WHY.md) • [Diff](./presets/fastapi-postgresql/before-after.md) |
+
 
 ---
 
