@@ -34,19 +34,30 @@ This repository provides **drop-in configuration presets (`GEMINI.md`)** that co
 | **[React Native + Expo](./presets/react-native-expo/)** | Cross-platform splits, native SDK alignment, Metro cache, async storage | Flash of unauthenticated content (FOUC), JS bridge animation stutter, native symbol crashes | [Rules](./presets/react-native-expo/GEMINI.md) • [Why](./presets/react-native-expo/WHY.md) • [Diff](./presets/react-native-expo/before-after.md) |
 | **[FastAPI + PostgreSQL](./presets/fastapi-postgresql/)** | Async SQLAlchemy 2.0, Alembic migrations, connection pooling, Pydantic v2 DTOs | MissingGreenlet exceptions, leaked transaction locks, event-loop blocking, password leaks | [Rules](./presets/fastapi-postgresql/GEMINI.md) • [Why](./presets/fastapi-postgresql/WHY.md) • [Diff](./presets/fastapi-postgresql/before-after.md) |
 | **[Go (Gin/Fiber) + HTMX](./presets/go-gin-htmx/)** | Context propagation, `database/sql` pool caps, dual-mode `HX-Request` rendering | Leaked goroutines, database socket exhaustion, page-in-a-page HTML corruptions | [Rules](./presets/go-gin-htmx/GEMINI.md) • [Why](./presets/go-gin-htmx/WHY.md) • [Diff](./presets/go-gin-htmx/before-after.md) |
-
-
+| **[LangGraph + LangChain](./presets/langchain-langgraph-agent/)** | Multi-agent state machines, recursion caps, strict Pydantic v2 schemas, token budgets | Runaway token spend loops, schema hallucination, unhandled tool crashes | [Rules](./presets/langchain-langgraph-agent/GEMINI.md) • [Why](./presets/langchain-langgraph-agent/WHY.md) • [Diff](./presets/langchain-langgraph-agent/before-after.md) |
+| **[Solana + Anchor (Rust)](./presets/solana-anchor-rust/)** | Canonical PDA derivation, unchecked math bans, compute unit budgeting, CPI auth | Silent balance underflow/overflow, spoofed CPI programs, 200k CU exhaustion | [Rules](./presets/solana-anchor-rust/GEMINI.md) • [Why](./presets/solana-anchor-rust/WHY.md) • [Diff](./presets/solana-anchor-rust/before-after.md) |
 
 ---
 
-## 🚀 Quickstart & Installation
+## 🚀 1-Command Installation
 
-### Option 1: Root Project Rules (`GEMINI.md` / `AGENTS.md`)
-Copy the desired stack's `GEMINI.md` into the root of your workspace:
+You can install any preset directly into your repository with one command:
+
+```bash
+# Clone and install preset into your current directory
+python install.py <preset-name>
+
+# Example:
+python install.py nextjs-supabase
+# => Installed 'nextjs-supabase' rules to .gemini/GEMINI.md
+```
+
+### Manual Installation
+Copy the desired stack's `GEMINI.md` into `.gemini/` or root:
 
 ```bash
 # Example: Using the Next.js + Supabase preset
-curl -sSL https://raw.githubusercontent.com/ashusatyarthi-wq/antigravity-rules-presets/main/presets/nextjs-supabase/GEMINI.md -o GEMINI.md
+curl -sSL https://raw.githubusercontent.com/ashusatyarthi-wq/antigravity-rules-presets/main/presets/nextjs-supabase/GEMINI.md -o .gemini/GEMINI.md
 ```
 
 ### Option 2: Scoped Customizations (`.agents/rules/`)
